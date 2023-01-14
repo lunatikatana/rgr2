@@ -58,7 +58,7 @@ public:
 		cout << "Наименование товара:" << endl;
 		cin >> to[n].tov;
 		
-		cout << "Зерна:" << endl;
+		cout << "Форма головки:" << endl;
 		cin >> to[n].formagol;
 		cout << "Размер:" << endl;
 		cin >> to[n].razmer;
@@ -88,7 +88,7 @@ public:
 		}
 		to[ito] = to[n - 1];
 		n--;
-		cout << "Товар успешно удален" << endl;
+		cout << "Товар удален" << endl;
 	}
 
 	void change() {
@@ -105,7 +105,7 @@ public:
 				cout << "Наименование товара:" << endl;
 				cin >> to[i].tov;
 				
-				cout << "Зерна:" << endl;
+				cout << "Форма головки:" << endl;
 				cin >> to[i].formagol;
 				cout << "Размер:" << endl;
 				cin >> to[i].razmer;
@@ -362,9 +362,9 @@ public:
 class Orders {
 private:
 	orders zak[20] = {
-		{ "Евгений","Латте_из_Бразилии",160 },
-		{ "Мария","Эспрессо_из_Вьетнама",165 },
-		{ "Роман","Капучино_из_Индии",170 } };
+		{ "Евгений","Болт_со_скрытой_головкой",5 },
+		{ "Мария","Болт_с_полукруглой_головкой",2 },
+		{ "Роман","Болт_с_полукруглой_головкой",7 } };
 
 public:
 	ofstream fout;
@@ -745,4 +745,3 @@ int main()
 		ctrl.showMenu();
 	return 0;
 }
-
