@@ -24,7 +24,7 @@ struct orders
 struct tovari
 {
 	string tov;
-	string zerna;
+	string formagol;
 	string razmer;
 	double price;
 };
@@ -32,9 +32,9 @@ struct tovari
 class tovar {
 private:
 	tovari to[10] = {
-		{ "Эспрессо","Бразилия","large",100 },
-		{ "Латте" ,"Индия","small",350 },
-		{ "Капучино","Вьетнам","medium",330 },
+		{ "Болт","шестигранная","М6",133 },
+		{ " Болт" ,"полукруглая","М5",199 },
+		{ " Болт ","потайная","М2",146 },
 	};
 public:
 	ofstream fout;
@@ -44,7 +44,7 @@ public:
 		for (int i = 0; i < n; i++) {
 			cout << setw(4) << " Наименование товара:" << setw(11) << (to + i)->tov;
 			
-			cout << setw(4) << " Зерна:" << setw(20) << (to + i)->zerna;
+			cout << setw(4) << " форма головки:" << setw(20) << (to + i)->formagol;
 			cout << setw(4) << " Размер:" << setw(11) << (to + i)->razmer;
 			cout << setw(4) << " Цена:" << setw(11) << (to + i)->price << endl;
 		}
@@ -59,7 +59,7 @@ public:
 		cin >> to[n].tov;
 		
 		cout << "Зерна:" << endl;
-		cin >> to[n].zerna;
+		cin >> to[n].formagol;
 		cout << "Размер:" << endl;
 		cin >> to[n].razmer;
 		cout << "Цена:" << endl;
@@ -106,7 +106,7 @@ public:
 				cin >> to[i].tov;
 				
 				cout << "Зерна:" << endl;
-				cin >> to[i].zerna;
+				cin >> to[i].formagol;
 				cout << "Размер:" << endl;
 				cin >> to[i].razmer;
 				cout << "Цена:" << endl;
@@ -128,7 +128,7 @@ public:
 		fout << n << endl;
 		for (int i = 0; i < n; i++) {
 			fout << to[i].tov << endl;
-			fout << to[i].zerna << endl;
+			fout << to[i].formagol << endl;
 			fout << to[i].razmer << endl;
 			fout << to[i].price << endl;
 		}
@@ -141,7 +141,7 @@ public:
 		fin.ignore();
 		for (int i = 0; i < n; i++) {
 			getline(fin, to[i].tov);
-			getline(fin, to[i].zerna);
+			getline(fin, to[i].formagol);
 			cin >> (fin, to[i].razmer);
 			cin >> (fin, to[i].price);
 			fin.ignore();
@@ -745,3 +745,4 @@ int main()
 		ctrl.showMenu();
 	return 0;
 }
+
